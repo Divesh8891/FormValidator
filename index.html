@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jasny-bootstrap.min.js"></script>
+        <script src="js/custom-validate.js"></script>
+        <script src="js/index.js"></script>
+
+    </head>
+    <body>
+        <section class="form-section">     
+            <form data-toggle="validator" role="form">
+                <div class="form-group">
+                    <label for="inputName" class="control-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" name="inputName"  data-val-required="Last Name Required!" placeholder="Cina Saffary" >
+                    <span class="text-danger field-validation-error" data-valmsg-for="inputName" data-valmsg-replace="true"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" data-val-regex="Email Address is not valid" data-val-regex-pattern="[\s]{0,}[A-Za-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?[\s]{0,}" data-val-required="Email Address Required!" >
+                    <span class="text-danger field-validation-error" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="control-label">Password</label>
+                    <input type="password" data-minlength="6" class="form-control" id="inputPassword" name="inputPassword"  data-val-required="Last Name Required!" placeholder="Password" >
+                    <span class="text-danger field-validation-error" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <div class="radio form-control"   data-val-required="Last Name Required!">
+
+                        <label>
+                            <input type="radio" name="underwear" >
+                            Boxers
+                        </label>
+                    </div>
+                    <div class="radio  name="underwear">
+                        <label>
+                            <input type="radio" name="underwear" class="form-control"   data-val-required="Last Name Required!">
+                            Briefs
+                        </label>
+                    </div>
+                    <span class="text-danger field-validation-error" data-valmsg-for="underwear" data-valmsg-replace="true"></span>
+
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="terms"   class="form-control" name="inputcheck"  data-val-required="Last Name Required!">
+                            Check yourself
+                        </label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <span class="text-danger field-validation-error" data-valmsg-for="inputcheck" data-valmsg-replace="true"></span>
+
+                </div>
+                <div class="form-group">
+
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control" data-trigger="fileinput" name="upload" data-val-required="Last Name Required!">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i> 
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file">
+                            <span class="fileinput-new">Select file</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input type="file" name="...">
+                        </span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    </div>
+                    <span class="text-danger field-validation-error" data-valmsg-for="upload" data-valmsg-replace="true"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" id="submitForm">Submit</button>
+                </div>
+            </form>
+        </section>
+
+    </body>
+</html>
